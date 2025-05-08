@@ -1,5 +1,5 @@
 import styles from './page.module.scss'
-import logoimg from '/public/logo.svg'
+import logoimg from '/public/La nave.svg'
 import Image  from 'next/image'
 import Link from 'next/link'
 import { api } from '@/services/api'
@@ -32,7 +32,7 @@ export default function Page() {
       console.log(response.data); 
 
       const expressTime = 60 * 60 * 24 * 30 * 1000;
-      cookies().set("session", response.data.token, {
+      (await cookies()).set("session", response.data.token, {
         maxAge: expressTime,
         path: "/",
         httpOnly: false,
