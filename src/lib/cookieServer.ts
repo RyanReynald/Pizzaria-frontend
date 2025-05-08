@@ -1,7 +1,8 @@
 import { cookies } from 'next/headers';
 
-export default async function Page() {
+export async function getCookieServer(){
     const cookieStore = await cookies()
-    const theme = cookieStore.get('theme')
-    return '.....'
+    const token = cookieStore.get("session")?.value;
+
+    return token || null;
 }
