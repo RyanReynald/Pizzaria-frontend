@@ -1,6 +1,6 @@
 import { getCookie } from "cookies-next";
 
-export function getcookieClient(){
+export function getCookieClient(){
     const token = getCookie("session")
     return token;
 }
