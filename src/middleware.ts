@@ -9,7 +9,7 @@ export async function middleware(req: NextRequest) {
         return NextResponse.next();
     }
 
-   const token = getCookieServer();
+   const token = await getCookieServer();
    
     if(pathname.startsWith("/dashboard")){
         if(!token){
