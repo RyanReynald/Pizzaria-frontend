@@ -17,7 +17,7 @@ export default function Category(){
             name: name,
         }
 
-        const token = getCookieServer();
+        const token = await getCookieServer();
 
         await api.post("/category", data, {
             headers:{
